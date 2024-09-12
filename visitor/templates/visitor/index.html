@@ -1,0 +1,14 @@
+{% extends "visitor/layout.html" %}
+{% load static %}
+
+{% block title %}MediFlow{% endblock title %}
+{% block css_link %}<link rel="stylesheet" href="{% static 'visitor/styles/index.css' %}">{% endblock css_link %}
+
+{% block body %}
+<h1>Welcome to Mediflow</h1>
+
+
+<a href="{% url 'visitor:login' %}">Login</a>
+
+
+{% endblock body %}
