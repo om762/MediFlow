@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 body, html {
   height: 100%;
   margin: 0;
@@ -15,8 +16,9 @@ body, html {
   width: 100%;
   padding: 0 10px;
 }
+
 nav{
-  background: #ffffff;
+  background: #f0fdff;
   height: 60px;
   position: fixed;
   top: 0;
@@ -25,6 +27,7 @@ nav{
   padding: 20px;
   transition: all 0.4s ease;
 }
+
 nav.sticky{
   padding: 15px 20px;
   background: #ffffff;
@@ -54,29 +57,30 @@ nav.sticky .logo a{
   margin-right: 50px;
 
 }
- .nav-links li a{
+.nav-links li a{
   font-size: 20px;
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.3s ease;
   transition: text-shadow 0.3s ease;
-  background-image: linear-gradient(90deg, #000000 50%, #0122ff 50%);
+  background-image: linear-gradient(90deg, #000000 50%, #67dbff 50%);
   background-size: 200%;
   background-position: 0;
   transition: background-position 0.3s ease;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
- .nav-links li a:hover{
-  border-bottom: 2px solid #0122ff;
+.nav-links li a:hover{
+  border-bottom: 2px solid #67dbff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   background-position: -100%;
 }
- nav.sticky .nav-links li a{
-   color: #080279;
-   transition: all 0.4s ease;
+nav.sticky .nav-links li a{
+  color: #080279;
+  transition: all 0.4s ease;
 }
- nav.sticky .nav-links li a:hover{
+
+nav.sticky .nav-links li a:hover{
   color: #ffffff;
 }
 
@@ -135,30 +139,38 @@ h2 {
 
 .input-field label {
   position: absolute;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   top: 50%;
   left: 0;
+  padding: 0 0.7em;
   transform: translateY(-50%);
   color: #fff;
   font-size: 16px;
   pointer-events: none;
-  transition: 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .input-field input {
+  font-family: monospace;
+  font-weight: 600;
+  letter-spacing: 2px;
   width: 100%;
   height: 40px;
   background: transparent;
   border: none;
+  padding: 0 0.7em;
   outline: none;
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .input-field input:focus~label,
 .input-field input:valid~label {
   font-size: 0.8rem;
   top: 10px;
+  padding: 0 0.7em;
   transform: translateY(-120%);
+  color: #000;
 }
 
 .forget {

@@ -10,10 +10,32 @@
     {% block css_link %}{% endblock css_link %}
 </head>
 <body>
-    <div class="body-container">
-        {% block body %}
-        {% endblock body %}
+
+
+<!-- nav div for abstracting the navigation bar from other elements  -->
+<!-- nav bar -->
+<div class="nav-div">
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+            <a href="#">MediFlow</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="glow-on-hover">Home</a></li>
+            <li><a href="#" class="glow-on-hover">About</a></li>
+            <li><a href="#" class="glow-on-hover">Login</a></li>
+        </ul>
+        </div>
+    </nav>
+</div>
+
+
+<!-- content of body  -->
+<div id="body-container">
+    {% block body %}
+    {% endblock body %}
     </div>
-    {% block script %}{% endblock script %}
+</div>
+{% block script %}{% endblock script %}
 </body>
 </html>
