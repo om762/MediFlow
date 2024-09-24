@@ -14,7 +14,8 @@ body {
 
 /* Container */
 .login-container {
-    background-color: white;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 35px;
     border-radius: 40px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
@@ -99,11 +100,19 @@ input[type="text"]:focus-visible, input[type="password"]:focus-visible {
     background-color: #1A237E;
 }
 
-/* Links */
+.message {
+    color: rgb(138, 23, 23);
+    text-align: left;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
 .forgot-password {
+    font-weight: bold;
+    margin-bottom: 15px;
     display: block;
-    margin-top: 15px;
-    color: #64B5F6;
+    margin-top: 0px;
+    color: #000000;
     text-decoration: none;
 }
 

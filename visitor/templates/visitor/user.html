@@ -1,0 +1,12 @@
+{% extends "visitor/layout.html" %}
+{% load static %}
+
+{% block title %}MediFlow-{{ user.username }}{% endblock title %}
+{% block css_link %}<link rel="stylesheet" href="{% static 'visitor/styles/user.css' %}">{% endblock css_link %}
+
+{% block body %}
+
+<h1>username: {{user.username}}</h1>
+<h1>contact: {{user_profile.contact_number}}</h1>
+
+{% endblock body %}
