@@ -22,16 +22,17 @@ def login_view(request):
         if request.user.role != "VS":
             return HttpResponseRedirect(reverse("staff:workspace"))
         else:
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect(reverse('visitor:user_view'))
     if request.method == "POST":
         username = request.POST["username"]
         password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
-
-
         if user is not None:
             login(request, user)
-            
+            if request.user.role != "VS":
+                return HttpResponseRedirect(reverse("staff:workspace"))
+            else:
+                return HttpResponseRedirect(reverse('visitor:user_view'))
         else:
             return render(request, "visitor/login.html", {
                 "message": "Invalid username and/or password."
